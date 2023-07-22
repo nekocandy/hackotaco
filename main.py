@@ -4,8 +4,8 @@ add_page_title("GG!")
 
 show_pages(
     [
-        Page("./page/home.py", "Home", "🏠"),
-        Page("./page/hello.py", "Hello", "👋"),
-        Page("./page/user_data.py", "User Data", "👤"),
+        Page("./pages/home.py", "Home", "🏠"),
+        Page("./pages/hello.py", "Hello", "👋"),
+        Page("./pages/user_data.py", "User Data", "👤"),
     ]
 )
