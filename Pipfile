@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 streamlit = "*"
+streamlit-auth0-component = "*"
 
 [dev-packages]
 
