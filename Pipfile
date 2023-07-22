@@ -10,6 +10,7 @@ colorama = "*"
 st-pages = "*"
 streamlit-extras = "*"
 pymongo = "*"
+streamlit-echarts = "*"
 
 [dev-packages]
 black = "*"
