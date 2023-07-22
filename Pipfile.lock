@@ -1,6 +1,7 @@
 {
     "_meta": {
         "hash": {
+            "sha256": "5fbc55c67debce9dca863597993cafae345d4de5cb778f021b400c9268902e43"
             "sha256": "93f61e255f93eda9bcfcdc356f7dfb407426fcbfe468ac4f890f3824cf921d1a"
         },
         "pipfile-spec": 6,
@@ -160,6 +161,14 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==5.1.1"
+        },
+        "ecdsa": {
+            "hashes": [
+                "sha256:190348041559e21b22a1d65cee485282ca11a6f81d503fddb84d5017e9ed1e49",
+                "sha256:80600258e7ed2f16b9aa1d7c295bd70194109ad5a30fdee0eaeefef1d4c559dd"
+            ],
+            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==0.18.0"
         },
         "gitdb": {
             "hashes": [
@@ -481,6 +490,14 @@
             "markers": "python_version >= '3.7'",
             "version": "==12.0.1"
         },
+        "pyasn1": {
+            "hashes": [
+                "sha256:87a2121042a1ac9358cabcaf1d07680ff97ee6404333bacca15f76aa8ad01a57",
+                "sha256:97b7290ca68e62a832558ec3976f15cbf911bf5d7c7039d8b861c2a0ece69fde"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'",
+            "version": "==0.5.0"
+        },
         "pydeck": {
             "hashes": [
                 "sha256:07edde833f7cfcef6749124351195aa7dcd24663d4909fd7898dbd0b6fbc01ec",
@@ -512,6 +529,13 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==2.8.2"
+        },
+        "python-jose": {
+            "hashes": [
+                "sha256:55779b5e6ad599c6336191246e95eb2293a9ddebd555f796a65f838f07e5d78a",
+                "sha256:9b1376b023f8b298536eedd47ae1089bcdb848f1535ab30555cd92002d78923a"
+            ],
+            "version": "==3.3.0"
         },
         "pytz": {
             "hashes": [
@@ -655,6 +679,14 @@
             "markers": "python_version >= '3.8'",
             "version": "==0.9.2"
         },
+        "rsa": {
+            "hashes": [
+                "sha256:90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7",
+                "sha256:e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
+            ],
+            "markers": "python_version >= '3.6' and python_version < '4'",
+            "version": "==4.9"
+        },
         "six": {
             "hashes": [
                 "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
@@ -678,6 +710,14 @@
             ],
             "index": "pypi",
             "version": "==1.25.0"
+        },
+        "streamlit-auth0-component": {
+            "hashes": [
+                "sha256:4f89485a53cc2b3f549cccf217e8b3b451a2ba068c964475c2d7d7165cc35240",
+                "sha256:680693ef30e69d618ffd91b030a64223c3b9773180055aca663da9daddd1b28f"
+            ],
+            "index": "pypi",
+            "version": "==0.1.5"
         },
         "tenacity": {
             "hashes": [
