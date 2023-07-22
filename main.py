@@ -8,5 +8,6 @@ show_pages(
         Page("./pages/hello.py", "Hello", "👋"),
         Page("./pages/user_data.py", "User Data", "👽"),
         Page("./pages/display.py", "View", "📊"),
+        Page("./pages/mkd.py", "Editor", "📝"),
     ]
 )
