@@ -16,6 +16,10 @@ if "user_info" not in st.session_state or not st.session_state["user_info"]:
         st.session_state["user_info"] = typed_user
         if not user_data_from_db:
             switch_page("User Data")
+
+        user_college_name = user_data_from_db.get("college_name", None)
+        if not user_college_name or len(user_college_name) == 0:
+            switch_page("User Data")
 else:
     user_data: typing.Union[User, bool] = st.session_state["user_info"]
     if not not user_data:
