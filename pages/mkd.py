@@ -16,7 +16,7 @@ colored_header(
 col1, col2 = st.columns(2)
 with col1:
   st.write("Markdown editor")
-  txt = st.text_area("")
+  txt = st.text_area("",value="" ,height=250)
   # st.markdown(st.text_area("Description", "Description"))
 
 with col2:
