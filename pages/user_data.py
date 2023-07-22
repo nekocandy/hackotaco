@@ -15,7 +15,7 @@ db_user_data = get_user_data(user_data.nickname)
 st.image(user_data.picture, width=100)
 colored_header(
     label=f"Welcome @{user_data.name}",
-    description="Fill in the details to auto-fill into the devpost",
+    description="Fill in your details to make it available to the team for easy access",
     color_name="green-70",
 )
 # st.header(f"Welcome {user_data.name}!")
