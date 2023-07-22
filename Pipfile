@@ -7,8 +7,12 @@ name = "pypi"
 streamlit = "*"
 streamlit-auth0-component = "*"
 colorama = "*"
+st-pages = "*"
+streamlit-extras = "*"
+ruff = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.11"
