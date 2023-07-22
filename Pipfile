@@ -9,10 +9,11 @@ streamlit-auth0-component = "*"
 colorama = "*"
 st-pages = "*"
 streamlit-extras = "*"
-ruff = "*"
+pymongo = "*"
 
 [dev-packages]
 black = "*"
+ruff = "*"
 
 [requires]
 python_version = "3.11"
