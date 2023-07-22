@@ -1,8 +1,11 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.let_it_rain import rain
+from streamlit_extras.switch_page_button import switch_page
 import requests
-from urllib.parse import parse_qs, urlparse
+
+if "user_info" not in st.session_state or not st.session_state["user_info"]:
+    switch_page("Home")
 
 rain(
     emoji="💻",
