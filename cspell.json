@@ -4,8 +4,12 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "Echart",
+        "echarts",
+        "hackathon",
         "pymongo",
-        "streamlit"
+        "streamlit",
+        "Tacko"
     ],
     "ignoreWords": [],
     "import": []
