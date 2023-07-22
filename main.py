@@ -1,10 +1,10 @@
-from auth0_component import login_button
-import streamlit as st
+from st_pages import Page, show_pages, add_page_title
 
-clientId = st.secrets["auth"]["client_id"]
-domain = st.secrets["auth"]["domain"]
+add_page_title("GG!")
 
-if "user_info" not in st.session_state or not st.session_state["user_info"]:
-  user_info = login_button(clientId, domain = domain)
-  st.session_state["user_info"] = user_info
-
+show_pages(
+    [
+        Page("./pages/home.py", "Home", "🏠"),
+        Page("./pages/hello.py", "Hello", "👋"),
+    ]
+)
