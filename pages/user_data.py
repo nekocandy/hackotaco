@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.switch_page_button import switch_page
 
-from lib.database.user import get_user_data
+from lib.database.user import get_user_data, set_user_data
 from lib.types.User import User
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
@@ -20,7 +20,9 @@ colored_header(
 )
 # st.header(f"Welcome {user_data.name}!")
 college_name = st.text_input(
-    "College Name", value=db_user_data.college_name if db_user_data else ""
+    "College Name",
+    value=db_user_data.get("college_name", "") if db_user_data else "",
 )
 if college_name:
     st.write(f"Your college name is {college_name}")
+    set_user_data(user_data.nickname, {"college_name": college_name})
