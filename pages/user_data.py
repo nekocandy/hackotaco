@@ -26,3 +26,10 @@ college_name = st.text_input(
 if college_name:
     st.write(f"Your college name is {college_name}")
     set_user_data(user_data.nickname, {"college_name": college_name})
+
+st.text_input(
+    label="Your GitHub username",
+    disabled=True,
+    value=f"@{user_data.nickname}",
+    help="This is your GitHub username. It is not editable.",
+)
