@@ -15,11 +15,11 @@ colored_header(
 
 col1, col2 = st.columns(2)
 with col1:
-  st.title("Markdown editor")
+  st.write("Markdown editor")
   txt = st.text_area("")
   # st.markdown(st.text_area("Description", "Description"))
 
 with col2:
-  st.title("Rendered .md")
+  st.write("Rendered .md")
   st.markdown(txt)
 
