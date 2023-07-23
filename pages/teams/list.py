@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.switch_page_button import switch_page
-from streamlit_extras.metric_cards import style_metric_cards
 
 from lib.database.teams import list_teams
 from lib.types.User import User
@@ -17,7 +16,7 @@ colored_header(
     color_name="violet-70",
 )
 
-with open('styles\liststyle.css') as f:
+with open('styles/liststyle.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 projects = list_teams(user_info.nickname)
@@ -28,5 +27,3 @@ for col in range(len(cols)):
     column = cols[col]
     column.metric(
         label="Name", value=project["team_name"], delta=project["team_id"])
-
-# style_metric_cards()
