@@ -11,6 +11,7 @@ st-pages = "*"
 streamlit-extras = "*"
 pymongo = "*"
 streamlit-echarts = "*"
+nanoid = "*"
 
 [dev-packages]
 black = "*"
