@@ -24,3 +24,4 @@ else:
     user_data: typing.Union[User, bool] = st.session_state["user_info"]
     if not not user_data:
         st.write(f"Welcome {user_data.name}!")
+        switch_page("Hello")

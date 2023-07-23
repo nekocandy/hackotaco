@@ -15,6 +15,7 @@ nanoid = "*"
 st-click-detector = "*"
 pandas = "*"
 streamlit-chat = "*"
+streamlit-card = "*"
 
 [dev-packages]
 black = "*"

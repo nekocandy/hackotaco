@@ -9,5 +9,9 @@ def get_user_data(username: str):
         return None
 
 
+def get_all_users():
+    return list(db.users.find({}))
+
+
 def set_user_data(username: str, data: dict):
     db.users.update_one({"username": username}, {"$set": data}, upsert=True)
