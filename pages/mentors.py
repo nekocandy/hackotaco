@@ -19,11 +19,9 @@ colored_header(
     color_name="yellow-70",
 )
 
+
 def rain_pfp():
-    rain(
-        "💡",
-        animation_length="2s"
-    )
+    rain("💡", animation_length="2s")
 
 
 users = get_all_users()
@@ -46,9 +44,9 @@ for i in range(len(card_data)):
     info = card_data[i]
     with columns[i].container():
         card(
-        title=info["name"],
-        text=f"Org: {info['college_name']}\n|{info['followers']} Followers | Available for Discussion",  # noqa: E501
-        image=info["avatar_url"],
-        url=info["github_url"],
-        on_click=rain_pfp,
-    )
+            title=info["name"],
+            text=f"Org: {info['college_name']}\n|{info['followers']} Followers | Available for Discussion",  # noqa: E501
+            image=info["avatar_url"],
+            url=info["github_url"],
+            on_click=rain_pfp,
+        )

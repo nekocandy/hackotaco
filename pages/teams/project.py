@@ -49,7 +49,7 @@ def render(title, key, value):
     text = st.text_area(title, value)
     st.header("Rendered Markdown")
     st.markdown(text)
-    if text: 
+    if text:
         set_team_data(id, {key: text})
 
 
@@ -57,7 +57,9 @@ st.info(
     f"Team ID: **{project_data['team_id']}**\n\nSend this ID to your group member to join this team"  # noqa: E501
 )  # noqa: E501
 
-team_info, markdown, member_details, chat = st.tabs(["Team Info", "Project Information [Markdown]", "Team Member Details", "Chat"])  # noqa: E501
+team_info, markdown, member_details, chat = st.tabs(
+    ["Team Info", "Project Information [Markdown]", "Team Member Details", "Chat"]
+)  # noqa: E501
 
 with team_info:
     df = pd.DataFrame.from_dict(github_members)
@@ -68,7 +70,9 @@ with team_info:
 with markdown:
     st.header("Project Information")
     st.caption("write your project details")
-    st.info("with this, different members can edit different sections. this eradicates the last minute friction between the members")  # noqa: E501
+    st.info(
+        "with this, different members can edit different sections. this eradicates the last minute friction between the members"
+    )  # noqa: E501
     (
         inspiration,
         what_it_does,
@@ -132,6 +136,7 @@ with chat:
     past = []
     chat_placeholder = st.empty()
     with chat_placeholder.container():
+
         def on_input_change():
             user_input = st.session_state.user_input
             past.append(user_input)
@@ -141,10 +146,12 @@ with chat:
             del st.session_state.generated[:]
 
         message("Hello!", is_user=True, avatar_style="identicon")
-        message("What are the plans for this week?", is_user=True, avatar_style="identicon")  # noqa: E501
-        for i in range(len(past)):                
+        message(
+            "What are the plans for this week?", is_user=True, avatar_style="identicon"
+        )  # noqa: E501
+        for i in range(len(past)):
             message(past[i], is_user=True, key=f"{i}_user")
-        
+
     st.button("Clear message", on_click=on_btn_click)
 
     with st.container():
@@ -168,9 +175,23 @@ with member_details:
 
     names, colleges, usernames = st.columns(3)
     colleges.header("College Name(s)")
-    colleges.text_area("Colleges", "\n".join([x["college"] for x in member_info]), disabled=True, help="Name of colleges of all team members")  # noqa: E501
+    colleges.text_area(
+        "Colleges",
+        "\n".join([x["college"] for x in member_info]),
+        disabled=True,
+        help="Name of colleges of all team members",
+    )  # noqa: E501
     usernames.header("Github Username(s)")
-    usernames.text_area("Github Usernames", "\n".join([x["Username"] for x in member_info]), disabled=True, help="Github usernames of all team members")  # noqa: E501
+    usernames.text_area(
+        "Github Usernames",
+        "\n".join([x["Username"] for x in member_info]),
+        disabled=True,
+        help="Github usernames of all team members",
+    )  # noqa: E501
     names.header("Member Name(s)")
-    names.text_area("Names", "\n".join([x["Name"] for x in member_info]), disabled=True, help="Names of all team members")  # noqa: E501
-    
+    names.text_area(
+        "Names",
+        "\n".join([x["Name"] for x in member_info]),
+        disabled=True,
+        help="Names of all team members",
+    )  # noqa: E501

@@ -18,5 +18,5 @@ colored_header(
 team_id = st.text_input("Team ID")
 join_button = st.button("Team ID", disabled=len(team_id) <= 0)
 if join_button:
-  add_user_to_team(team_id, user_info.nickname)
-  switch_page("List")
+    add_user_to_team(team_id, user_info.nickname)
+    switch_page("List")
