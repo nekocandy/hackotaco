@@ -17,12 +17,16 @@ colored_header(
     color_name="violet-70",
 )
 
+with open('styles\liststyle.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 projects = list_teams(user_info.nickname)
 cols = st.columns(len(projects))
 
 for col in range(len(cols)):
     project = projects[col]
     column = cols[col]
-    column.metric(label="Name", value=project["team_name"], delta=project["team_id"])
+    column.metric(
+        label="Name", value=project["team_name"], delta=project["team_id"])
 
-style_metric_cards()
+# style_metric_cards()

@@ -16,15 +16,11 @@
     background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
 }
 
-img {
-    display: block;
-    border-radius: 50%;
-}
 
-div.css-1r6slb0.e1f1d6gn1 {
+[data-testid="metric-container"] {
     text-align: left;
     background-color: #42277bb7;
-    padding: 2% 2%;
+    padding: 4% 4%;
     border-radius: 10px;
     border: 1px solid;
     border-color: #c25eb38a;
@@ -37,34 +33,12 @@ div.css-1r6slb0.e1f1d6gn1 {
 
 }
 
-div.css-1r6slb0.e1f1d6gn1:hover {
+[data-testid="metric-container"]:hover {
     text-align: left;
     background-color: #5f449fa1;
-    padding: 2% 2%;
+    padding: 4% 4%;
     border-color: #da81cd8a;
     border-radius: 10px;
     transform: translateY(-5px);
     box-shadow: 0px 0px 10px 5px #472c86;
 }
-
-div.css-1wivap2.e1i5pmia3 {
-    color: white;
-    transition: color 0.3s ease;
-}
-
-div.css-1wivap2.e1i5pmia3:hover {
-    color: #fb0491;
-}
-
-div.row-widget stButton {
-    text-align: right;
-}
-
-/* div.css-ocqkz7.e1f1d6gn3 {
-    text-align: left;
-    background-color: #3c4963;
-    padding: 2% 2%;
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: aliceblue;
-} */
