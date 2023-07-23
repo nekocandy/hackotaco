@@ -12,5 +12,6 @@ show_pages(
         Section("Teams"),
         Page("./pages/teams/create.py", "Create", "👨‍💻"),
         Page("./pages/teams/list.py", "List", "👨‍💻"),
+        Page("./pages/bento.py", "AltProf", "👤"),
     ]
 )
