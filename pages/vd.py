@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.switch_page_button import switch_page
 from lib.types.User import User
+from annotated_text import annotated_text
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
     switch_page("Home")
@@ -30,6 +31,8 @@ vd_arr=["https://www.youtube.com/watch?v=mi9t8usEM3g&list=PLPDgudJ_VDUcgpSq_T1Nd
         
         "https://www.youtube.com/watch?v=p4qdvP9HeoU&list=PLPDgudJ_VDUcgpSq_T1NdXaevNLawrOGo&index=8&pp=iAQB"]
 
+annotated_text(
+    ("Video Resources", "hack-o-tacko","#39f" ),)
 
 col1, col2 = st.columns(2)
 
@@ -58,3 +61,6 @@ with col2:
     
   with st.expander("See Part 8"):
     st.video(vd_arr[7])
+    
+annotated_text(
+    ("Tutorial Sites", "hack-o-tacko","#39f" ),)
