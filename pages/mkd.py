@@ -27,7 +27,7 @@ default_value = """
 
 ## What we learned
 
-## What's next for HackerHacker
+## What's next?
 """
 
 col1, col2 = st.columns(2, gap="medium")
