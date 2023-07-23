@@ -11,6 +11,7 @@ show_pages(
         Page("./pages/mkd.py", "Editor", "📝"),
         Section("Teams"),
         Page("./pages/teams/create.py", "Create", "👨‍💻"),
+        Page("./pages/teams/join.py", "Join", "👨‍💻"),
         Page("./pages/teams/list.py", "List", "👨‍💻"),
         Page("./pages/teams/project.py", "Project", "👨‍💻"),
         Page("./pages/bento.py", "AltProf", "👤"),
