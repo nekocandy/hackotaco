@@ -10,7 +10,7 @@ user_data = st.session_state["user_info"]
 st.title("Welcome to Hack-o-Taco 🌮")
 st.subheader("This is you.")
 
-with open("styles\homestyle.css") as f:
+with open("styles/homestyle.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 a1, a2, a3 = st.columns(3)

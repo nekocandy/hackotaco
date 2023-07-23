@@ -54,7 +54,7 @@ st.info(
     f"Team ID: **{project_data['team_id']}**\n\nSend this ID to your group member to join this team"  # noqa: E501
 )  # noqa: E501
 
-team_info, markdown = st.tabs(["Team Info", "Project Information [Markdown]"])
+team_info, markdown, member_details = st.tabs(["Team Info", "Project Information [Markdown]", "Team Member Details"])  # noqa: E501
 
 with team_info:
     df = pd.DataFrame.from_dict(github_members)
@@ -122,3 +122,6 @@ with markdown:
 
     with what_is_next:
         render("What's next", "what_is_next", project_data.get("what_is_next", ""))
+
+with member_details:
+    st.write("Member Details")
