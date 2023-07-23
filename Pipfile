@@ -13,6 +13,7 @@ pymongo = "*"
 streamlit-echarts = "*"
 nanoid = "*"
 st-click-detector = "*"
+pandas = "*"
 
 [dev-packages]
 black = "*"

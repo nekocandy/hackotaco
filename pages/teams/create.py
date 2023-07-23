@@ -25,6 +25,5 @@ project_id = generate()
 project_name = st.text_input("Project Name")
 create_button = st.button("Create Project", disabled=len(project_name) <= 0)
 if create_button:
-    create_team(owner=user_info.nickname,
-                team_name=project_name, team_id=project_id)
+    create_team(owner=user_info.nickname, team_name=project_name, team_id=project_id)
     switch_page("list")

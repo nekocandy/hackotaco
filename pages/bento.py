@@ -10,8 +10,8 @@ user_data = st.session_state["user_info"]
 st.title("Welcome to Hack-o-Taco 🌮")
 st.subheader("This is you.")
 
-with open('styles\homestyle.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+with open("styles\homestyle.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 a1, a2, a3 = st.columns(3)
 a1.metric("Name", user_data.name, "Your Sexy Name")
@@ -28,7 +28,7 @@ if b1:
     with st.empty():
         while t1:
             mins, secs = divmod(t1, 60)
-            timer = '{:02d}:{:02d}'.format(mins, secs)
+            timer = "{:02d}:{:02d}".format(mins, secs)
             st.header(f"⏳ {timer}")
             time.sleep(1)
             t1 -= 1
@@ -38,7 +38,7 @@ if b1:
         while t2:
             # Start the break
             mins2, secs2 = divmod(t2, 60)
-            timer2 = '{:02d}:{:02d}'.format(mins2, secs2)
+            timer2 = "{:02d}:{:02d}".format(mins2, secs2)
             st.header(f"⏳ {timer2}")
             time.sleep(1)
             t2 -= 1

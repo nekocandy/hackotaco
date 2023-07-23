@@ -17,8 +17,8 @@ colored_header(
     color_name="violet-70",
 )
 
-with open('styles/liststyle.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+with open("styles/liststyle.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 projects = list_teams(user_info.nickname)
 cols = st.columns(len(projects))
@@ -26,10 +26,8 @@ cols = st.columns(len(projects))
 for col in range(len(cols)):
     project = projects[col]
     column = cols[col]
-    column.metric(
-        label="Name", value=project["team_name"], delta=project["team_id"])
+    column.metric(label="Name", value=project["team_name"], delta=project["team_id"])
     view_project = column.button("View Project", key=project["team_id"])
     if view_project:
         st.session_state["id"] = project["team_id"]
         switch_page("Project")
-    
