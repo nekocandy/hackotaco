@@ -1,10 +1,13 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.switch_page_button import switch_page
-from streamlit_extras.metric_cards import style_metric_cards
+# from streamlit_extras.metric_cards import style_metric_cards
 
 from lib.database.teams import list_teams
 from lib.types.User import User
+
+with open('styles\liststyle.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
     switch_page("Home")
@@ -23,6 +26,7 @@ cols = st.columns(len(projects))
 for col in range(len(cols)):
     project = projects[col]
     column = cols[col]
-    column.metric(label="Name", value=project["team_name"], delta=project["team_id"])
+    column.metric(
+        label="Name", value=project["team_name"], delta=project["team_id"])
 
 style_metric_cards()
