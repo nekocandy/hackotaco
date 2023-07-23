@@ -4,18 +4,18 @@ add_page_title("GG!")
 
 show_pages(
     [
-        Page("./pages/home.py", "Home", "🏠"),
-        Page("./pages/bento.py", "Hello", "👋"),
-        Page("./pages/user_data.py", "User Data", "👽"),
-        Page("./pages/display.py", "View", "📊"),
-        Page("./pages/vd.py", "Educational Resources", "💻"),
-        Page("./pages/mentors.py", "Mentor", "👨‍🏫"),
-        Section("Teams"),
-        Page("./pages/teams/create.py", "Create", "👨‍💻"),
-        Page("./pages/teams/join.py", "Join", "👨‍💻"),
-        Page("./pages/teams/list.py", "List", "👨‍💻"),
-        Page("./pages/teams/project.py", "Project", "👨‍💻"),
-        Page("./pages/mkd.py", "Emergency MD Editor", "📝", in_section=False),
+        Page("./page/home.py", "Home", "🏠"),
+        Page("./page/bento.py", "Hello", "👋"),
+        Page("./page/user_data.py", "User Data", "👽"),
+        Page("./page/display.py", "View", "📊"),
+        Page("./page/vd.py", "Educational Resources", "💻"),
+        Page("./page/mentors.py", "Mentor", "👨‍🏫"),
+        Section("Teams", icon="👨‍💻"),
+        Page("./page/teams/create.py", "Create", "👨‍💻"),
+        Page("./page/teams/join.py", "Join", "👨‍💻"),
+        Page("./page/teams/list.py", "List", "👨‍💻"),
+        Page("./page/teams/project.py", "Project", "👨‍💻"),
+        Page("./page/mkd.py", "Emergency MD Editor", "📝", in_section=False),
     ]
 )
 
