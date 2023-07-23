@@ -30,26 +30,31 @@ vd_arr=["https://www.youtube.com/watch?v=mi9t8usEM3g&list=PLPDgudJ_VDUcgpSq_T1Nd
         
         "https://www.youtube.com/watch?v=p4qdvP9HeoU&list=PLPDgudJ_VDUcgpSq_T1NdXaevNLawrOGo&index=8&pp=iAQB"]
 
-with st.expander("See Part 1"):
-  st.video(vd_arr[0])
-  
-with st.expander("See Part 2"):
-  st.video(vd_arr[1])
 
-with st.expander("See Part 3"):
-  st.video(vd_arr[2])
+col1, col2 = st.columns(2)
 
-with st.expander("See Part 4"):
-  st.video(vd_arr[3])
-  
-with st.expander("See Part 5"):
-  st.video(vd_arr[4])
-  
-with st.expander("See Part 6"):
-  st.video(vd_arr[5])
-  
-with st.expander("See Part 7"):
-  st.video(vd_arr[6])
-  
-with st.expander("See Part 8"):
-  st.video(vd_arr[7])
+with col1:
+  with st.expander("See Part 1"):
+    st.video(vd_arr[0])
+    
+  with st.expander("See Part 2"):
+    st.video(vd_arr[1])
+
+  with st.expander("See Part 3"):
+    st.video(vd_arr[2])
+
+  with st.expander("See Part 4"):
+    st.video(vd_arr[3])
+
+with col2:
+  with st.expander("See Part 5"):
+    st.video(vd_arr[4])
+    
+  with st.expander("See Part 6"):
+    st.video(vd_arr[5])
+    
+  with st.expander("See Part 7"):
+    st.video(vd_arr[6])
+    
+  with st.expander("See Part 8"):
+    st.video(vd_arr[7])
