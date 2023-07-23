@@ -1,8 +1,9 @@
 import streamlit as st
-from PIL import Image
+from streamlit_extras.switch_page_button import switch_page
 import time
-from streamlit_card import card
-from streamlit_extras.badges import badge
+
+if "user_info" not in st.session_state or not st.session_state["user_info"]:
+    switch_page("Landing")
 
 st.set_page_config(layout="wide")
 user_data = st.session_state["user_info"]
