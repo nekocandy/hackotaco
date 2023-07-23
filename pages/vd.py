@@ -10,7 +10,7 @@ user_data: User = st.session_state["user_info"]
 
 colored_header(
     label=f"Welcome @{user_data.name}",
-    description="Access Education Resources to kickstart your project.",
+    description="Access Educational Resources to kickstart your project.",
     color_name="blue-70",
 )
 
