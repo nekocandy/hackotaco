@@ -18,33 +18,35 @@ a1.metric("Name", user_data.name, "Sexy Name")
 a2.metric("Nickname", user_data.nickname, "One'n'only")
 a3.image(user_data.picture, width=150)
 
-b2, b1 = st.columns(2)
-b1 = st.button("Pomo!")
+st.write(f"{user_data.sub}")
 
-t1 = 1500
-t2 = 300
+# b2, b1 = st.columns(2)
+# b1 = st.button("Pomo!")
 
-if b1:
-    with st.empty():
-        while t1:
-            mins, secs = divmod(t1, 60)
-            timer = '{:02d}:{:02d}'.format(mins, secs)
-            st.header(f"⏳ {timer}")
-            time.sleep(1)
-            t1 -= 1
-            st.success("🔔 25 minutes is over! Time for a break!")
+# t1 = 1500
+# t2 = 300
 
-    with st.empty():
-        while t2:
-            # Start the break
-            mins2, secs2 = divmod(t2, 60)
-            timer2 = '{:02d}:{:02d}'.format(mins2, secs2)
-            st.header(f"⏳ {timer2}")
-            time.sleep(1)
-            t2 -= 1
-            st.error("⏰ 5 minute break is over!")
+# if b1:
+#     with st.empty():
+#         while t1:
+#             mins, secs = divmod(t1, 60)
+#             timer = '{:02d}:{:02d}'.format(mins, secs)
+#             st.header(f"⏳ {timer}")
+#             time.sleep(1)
+#             t1 -= 1
+#             st.success("🔔 25 minutes is over! Time for a break!")
 
-b2.write(f"{user_data.sub}")
+#     with st.empty():
+#         while t2:
+#             # Start the break
+#             mins2, secs2 = divmod(t2, 60)
+#             timer2 = '{:02d}:{:02d}'.format(mins2, secs2)
+#             st.header(f"⏳ {timer2}")
+#             time.sleep(1)
+#             t2 -= 1
+#             st.error("⏰ 5 minute break is over!")
+
+# b2.write(f"{user_data.sub}")
 
 
 # card(
