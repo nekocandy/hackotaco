@@ -5,6 +5,7 @@ show_pages(
         Page("./pages/landing.py", "Landing", "🏠"),
         Page("./pages/bento.py", "Hello", "👋"),
         Page("./pages/user_data.py", "User Data", "👽"),
+        Page("./pages/ideas.py", "Ideas", "💡"),
         Page("./pages/vd.py", "Educational Resources", "💻"),
         Page("./pages/mentors.py", "Mentor", "👨‍🏫"),
         Section("Teams", icon="👨‍💻"),
