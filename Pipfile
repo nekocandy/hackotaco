@@ -12,6 +12,7 @@ streamlit-extras = "*"
 pymongo = "*"
 streamlit-echarts = "*"
 nanoid = "*"
+st-click-detector = "*"
 
 [dev-packages]
 black = "*"

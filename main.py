@@ -1,4 +1,4 @@
-from st_pages import Page, Section, show_pages, add_page_title
+from st_pages import Page, Section, show_pages, add_page_title, hide_pages
 
 add_page_title("GG!")
 
@@ -12,7 +12,10 @@ show_pages(
         Section("Teams"),
         Page("./pages/teams/create.py", "Create", "👨‍💻"),
         Page("./pages/teams/list.py", "List", "👨‍💻"),
+        Page("./pages/teams/project.py", "Project", "👨‍💻"),
         Page("./pages/bento.py", "AltProf", "👤"),
         Page("./pages/vd.py", "Educational Resources", "💻"),
     ]
 )
+
+hide_pages(["Project"])
