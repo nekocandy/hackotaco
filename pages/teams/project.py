@@ -11,12 +11,12 @@ from lib.types.User import User
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
     switch_page("Home")
 
+st.set_page_config(layout="wide")
 user_info: User = st.session_state["user_info"]
 
 if "id" not in st.session_state or not st.session_state["id"]:
     switch_page("List")
 
-st.set_page_config(layout="wide")
 id = st.session_state["id"]
 
 project_data = get_team_info(id, user_info.nickname)
@@ -54,7 +54,7 @@ st.info(
     f"Team ID: **{project_data['team_id']}**\n\nSend this ID to your group member to join this team"  # noqa: E501
 )  # noqa: E501
 
-team_info, markdown = st.tabs(["Team Info", "Project Information"])
+team_info, markdown = st.tabs(["Team Info", "Project Information [Markdown]"])
 
 with team_info:
     df = pd.DataFrame.from_dict(github_members)
@@ -64,6 +64,8 @@ with team_info:
 
 with markdown:
     st.header("Project Information")
+    st.caption("write your project details")
+    st.info("with this, different members can edit different sections. this eradicates the last minute friction between the members")  # noqa: E501
     (
         inspiration,
         what_it_does,
