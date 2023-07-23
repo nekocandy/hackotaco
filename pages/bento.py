@@ -14,8 +14,8 @@ with open('styles\homestyle.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 a1, a2, a3 = st.columns(3)
-a1.metric("Name", user_data.name, "Sexy Name")
-a2.metric("Nickname", user_data.nickname, "One'n'only")
+a1.metric("Name", user_data.name, "Your Sexy Name")
+a2.metric("Nickname", user_data.nickname, "The One'n'only")
 a3.image(user_data.picture, width=150)
 
 st.write(f"{user_data.sub}")
