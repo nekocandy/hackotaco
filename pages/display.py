@@ -8,7 +8,7 @@ from streamlit_extras.switch_page_button import switch_page
 from lib.types.User import User
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
-    switch_page("Home")
+    switch_page("Landing")
 
 user_info: User = st.session_state["user_info"]
 st.warning(

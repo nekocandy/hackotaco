@@ -6,7 +6,7 @@ from lib.database.user import get_user_data, set_user_data
 from lib.types.User import User
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
-    switch_page("Home")
+    switch_page("Landing")
 
 
 user_data: User = st.session_state["user_info"]

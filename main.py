@@ -2,7 +2,7 @@ from st_pages import Page, Section, hide_pages, show_pages
 
 show_pages(
     [
-        Page("./pages/home.py", "Landing", "🏠"),
+        Page("./pages/landing.py", "Landing", "🏠"),
         Page("./pages/bento.py", "Hello", "👋"),
         Page("./pages/user_data.py", "User Data", "👽"),
         Page("./pages/vd.py", "Educational Resources", "💻"),

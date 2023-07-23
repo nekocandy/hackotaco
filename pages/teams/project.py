@@ -11,7 +11,7 @@ from lib.github import get_github_user_info
 from lib.types.User import User
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
-    switch_page("Home")
+    switch_page("Landing")
 
 if "id" not in st.session_state or not st.session_state["id"]:
     switch_page("List")
