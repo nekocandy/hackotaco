@@ -13,5 +13,6 @@ show_pages(
         Page("./pages/teams/create.py", "Create", "👨‍💻"),
         Page("./pages/teams/list.py", "List", "👨‍💻"),
         Page("./pages/bento.py", "AltProf", "👤"),
+        Page("./pages/vd.py", "Educational Resources", "💻"),
     ]
 )
