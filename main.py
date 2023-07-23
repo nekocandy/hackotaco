@@ -5,17 +5,16 @@ add_page_title("GG!")
 show_pages(
     [
         Page("./pages/home.py", "Home", "🏠"),
-        Page("./pages/hello.py", "Hello", "👋"),
+        Page("./pages/bento.py", "Hello", "👋"),
         Page("./pages/user_data.py", "User Data", "👽"),
         Page("./pages/display.py", "View", "📊"),
-        Page("./pages/mkd.py", "Editor", "📝"),
+        Page("./pages/mkd.py", "Emergency MD Editor", "📝"),
+        Page("./pages/vd.py", "Educational Resources", "💻"),
         Section("Teams"),
         Page("./pages/teams/create.py", "Create", "👨‍💻"),
         Page("./pages/teams/join.py", "Join", "👨‍💻"),
         Page("./pages/teams/list.py", "List", "👨‍💻"),
         Page("./pages/teams/project.py", "Project", "👨‍💻"),
-        Page("./pages/bento.py", "AltProf", "👤"),
-        Page("./pages/vd.py", "Educational Resources", "💻"),
     ]
 )
 
