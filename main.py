@@ -9,5 +9,6 @@ show_pages(
         Page("./pages/user_data.py", "User Data", "👽"),
         Page("./pages/display.py", "View", "📊"),
         Page("./pages/mkd.py", "Editor", "📝"),
+        Page("./pages/vd.py", "Educational Resources", "💻"),
     ]
 )
