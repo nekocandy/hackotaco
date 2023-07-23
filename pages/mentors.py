@@ -47,7 +47,7 @@ for i in range(len(card_data)):
     with columns[i].container():
         card(
         title=info["name"],
-        text=f"Org: {info['college_name']}\n|{info['followers']} Followers",
+        text=f"Org: {info['college_name']}\n|{info['followers']} Followers | Available for Discussion",  # noqa: E501
         image=info["avatar_url"],
         url=info["github_url"],
         on_click=rain_pfp,
