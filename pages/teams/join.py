@@ -1,9 +1,8 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.switch_page_button import switch_page
-from nanoid import generate
-from lib.database.teams import add_user_to_team, create_team
 
+from lib.database.teams import add_user_to_team
 from lib.types.User import User
 
 if "user_info" not in st.session_state or not st.session_state["user_info"]:

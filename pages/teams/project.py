@@ -5,6 +5,7 @@ from streamlit_extras.image_in_tables import table_with_images
 from streamlit_extras.switch_page_button import switch_page
 
 from lib.database.teams import get_team_info, set_team_data
+from lib.database.user import get_user_data
 from lib.github import get_github_user_info
 from lib.types.User import User
 
@@ -29,6 +30,7 @@ for member in members:
         {
             "avatar": user_data["avatar_url"],
             "name": user_data["name"],
+            "username": user_data["login"],
             "url": user_data["html_url"],
         }
     )
@@ -124,4 +126,26 @@ with markdown:
         render("What's next", "what_is_next", project_data.get("what_is_next", ""))
 
 with member_details:
-    st.write("Member Details")
+    st.write("Team Members' Details")
+    member_info = []
+    for member in github_members:
+        user_info = get_user_data(member["username"])
+        college_name = "N/A"
+        if user_info and user_info.__contains__("college_name"):
+            college_name = user_info["college_name"]
+        member_info.append(
+            {
+                "Name": member["name"],
+                "Username": member["username"],
+                "college": college_name,
+            }
+        )
+
+    names, colleges, usernames = st.columns(3)
+    colleges.header("College Name(s)")
+    colleges.text_area("Colleges", "\n".join([x["college"] for x in member_info]), disabled=True, help="Name of colleges of all team members")  # noqa: E501
+    usernames.header("Github Username(s)")
+    usernames.text_area("Github Usernames", "\n".join([x["Username"] for x in member_info]), disabled=True, help="Github usernames of all team members")  # noqa: E501
+    names.header("Member Name(s)")
+    names.text_area("Names", "\n".join([x["Name"] for x in member_info]), disabled=True, help="Names of all team members")  # noqa: E501
+    
