@@ -64,3 +64,23 @@ with col2:
     
 annotated_text(
     ("Tutorial Sites", "hack-o-tacko","#39f" ),)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("[**FreeCodeCamp**](https://www.freecodecamp.org/news/learning-python-from-zero-to-hero-120ea540b567/)")
+    
+    st.markdown("[**Python.org**](https://www.python.org/)")
+    
+    st.markdown("[**Real Python**](https://realpython.com/)")
+    
+    st.markdown("[**W3Schools Python**](https://www.w3schools.com/python/)")
+
+with col2:
+    st.markdown("[**Codecademy Python Course (Free version)**](https://www.codecademy.com/learn/learn-python-3)")
+    
+    st.markdown("[**Solo learn**](https://www.sololearn.com/Course/Python/)")
+    
+    st.markdown("[**JetBrains Academy Python Track (Free version)**](https://hyperskill.org/tracks/2)")
+    
+    st.markdown("[**Python for Beginners**](https://www.pythonforbeginners.com/)")
