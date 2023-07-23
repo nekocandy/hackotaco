@@ -8,7 +8,6 @@ show_pages(
         Page("./pages/bento.py", "Hello", "👋"),
         Page("./pages/user_data.py", "User Data", "👽"),
         Page("./pages/display.py", "View", "📊"),
-        Page("./pages/mkd.py", "Emergency MD Editor", "📝"),
         Page("./pages/vd.py", "Educational Resources", "💻"),
         Page("./pages/mentors.py", "Mentor", "👨‍🏫"),
         Section("Teams"),
@@ -16,6 +15,7 @@ show_pages(
         Page("./pages/teams/join.py", "Join", "👨‍💻"),
         Page("./pages/teams/list.py", "List", "👨‍💻"),
         Page("./pages/teams/project.py", "Project", "👨‍💻"),
+        Page("./pages/mkd.py", "Emergency MD Editor", "📝", in_section=False),
     ]
 )
 
