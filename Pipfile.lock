@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "674048723e175f5ece79b074af4396e6b91a35bc8daf5bdcefaf410a511279f4"
+            "sha256": "9ed2393cd5fb14d0c4763b34a76dca18b5a431cc90e20805ef2b3e3e6d513d2f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1426,6 +1426,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==0.0.61"
+        },
+        "streamlit-chat": {
+            "hashes": [
+                "sha256:bec918a6ff9d24fbc842d5a0e7c492e30e1ef71c3a72b94b0cb4be1a7300881e",
+                "sha256:e5911c8e3d5bbdd444782a0eb46a5f0cf24247124eb165bcc2e759540767ac3c"
+            ],
+            "index": "pypi",
+            "version": "==0.1.1"
         },
         "streamlit-echarts": {
             "hashes": [

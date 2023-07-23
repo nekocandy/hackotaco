@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.image_in_tables import table_with_images
+from streamlit_chat import message
 from streamlit_extras.switch_page_button import switch_page
 
 from lib.database.teams import get_team_info, set_team_data
@@ -12,12 +13,12 @@ from lib.types.User import User
 if "user_info" not in st.session_state or not st.session_state["user_info"]:
     switch_page("Home")
 
-st.set_page_config(layout="wide")
-user_info: User = st.session_state["user_info"]
-
 if "id" not in st.session_state or not st.session_state["id"]:
     switch_page("List")
 
+
+st.set_page_config(layout="wide")
+user_info: User = st.session_state["user_info"]
 id = st.session_state["id"]
 
 project_data = get_team_info(id, user_info.nickname)
@@ -56,7 +57,7 @@ st.info(
     f"Team ID: **{project_data['team_id']}**\n\nSend this ID to your group member to join this team"  # noqa: E501
 )  # noqa: E501
 
-team_info, markdown, member_details = st.tabs(["Team Info", "Project Information [Markdown]", "Team Member Details"])  # noqa: E501
+team_info, markdown, member_details, chat = st.tabs(["Team Info", "Project Information [Markdown]", "Team Member Details", "Chat"])  # noqa: E501
 
 with team_info:
     df = pd.DataFrame.from_dict(github_members)
@@ -124,6 +125,30 @@ with markdown:
 
     with what_is_next:
         render("What's next", "what_is_next", project_data.get("what_is_next", ""))
+
+with chat:
+    st.info("We could add a bridge relay between Hack-o-Taco and Discord")
+    st.title("Chat with teammates")
+    past = []
+    chat_placeholder = st.empty()
+    with chat_placeholder.container():
+        def on_input_change():
+            user_input = st.session_state.user_input
+            past.append(user_input)
+
+        def on_btn_click():
+            del st.session_state.past[:]
+            del st.session_state.generated[:]
+
+        message("Hello!", is_user=True, avatar_style="identicon")
+        message("What are the plans for this week?", is_user=True, avatar_style="identicon")  # noqa: E501
+        for i in range(len(past)):                
+            message(past[i], is_user=True, key=f"{i}_user")
+        
+    st.button("Clear message", on_click=on_btn_click)
+
+    with st.container():
+        st.text_input("Message:", on_change=on_input_change, key="user_input")
 
 with member_details:
     st.write("Team Members' Details")
