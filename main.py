@@ -10,6 +10,7 @@ show_pages(
         Page("./pages/display.py", "View", "📊"),
         Page("./pages/mkd.py", "Emergency MD Editor", "📝"),
         Page("./pages/vd.py", "Educational Resources", "💻"),
+        Page("./pages/mentors.py", "Mentor", "👨‍🏫"),
         Section("Teams"),
         Page("./pages/teams/create.py", "Create", "👨‍💻"),
         Page("./pages/teams/join.py", "Join", "👨‍💻"),
