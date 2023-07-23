@@ -41,6 +41,7 @@ div.css-1r6slb0.e1f1d6gn1:hover {
     text-align: left;
     background-color: #5f449fa1;
     padding: 2% 2%;
+    border-color: #da81cd8a;
     border-radius: 10px;
     transform: translateY(-5px);
     box-shadow: 0px 0px 10px 5px #472c86;
@@ -52,7 +53,7 @@ div.css-1wivap2.e1i5pmia3 {
 }
 
 div.css-1wivap2.e1i5pmia3:hover {
-    color: #1a003f;
+    color: #fb0491;
 }
 
 div.row-widget stButton {
